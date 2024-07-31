@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "His story exporter Extensions",
+    "description": "Upload my history data to the web",
+    "version": "1.0",
+    "action": {
+      "default_title": "Upload your history",
+      "default_popup": "popup.html"
+    },
+    "permissions": [
+        "history"
+    ],
+    "icons": {
+        "16": "img/icon-16.png",
+        "32": "img/icon-32.png",
+        "48": "img/icon-48.png",
+        "128": "img/icon-128.png"
+    }
+  }
