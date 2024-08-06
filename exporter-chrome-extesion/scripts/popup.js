@@ -1,3 +1,5 @@
+import hisStorySupabase from './hisStorySupabase.js';
+
 document.addEventListener('DOMContentLoaded', function() {
     // Load the saved URL from Chrome Storage
     chrome.storage.sync.get(['hisStoryExtUploadUrl'], function(result) {
@@ -22,5 +24,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const supabaseAPIKey = document.getElementById('his-story-ext-supabase-key').value;
         // Save api key to Chrome Storage
         chrome.storage.sync.set({ supabaseAPIKey: supabaseAPIKey});
+
+        async () => {
+            const userData = await hisStorySupabase.getUser(1);
+            if (userData) {
+                console.log('User:', userData);
+            }
+        }
     });
 });
